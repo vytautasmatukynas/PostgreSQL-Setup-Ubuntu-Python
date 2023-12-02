@@ -1,4 +1,4 @@
-# Ubuntu PostgreSQL Setup
+# Ubuntu PostgreSQL Setup App
 
 Simple script that can install, check version/status and enable/disable PostgreSQL on Ubuntu OS.
 
