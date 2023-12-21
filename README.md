@@ -1,4 +1,4 @@
-# Ubuntu PostgreSQL Setup
+# Ubuntu PostgreSQL Setup App
 
 ### WORK IN PROGRESS...
 
