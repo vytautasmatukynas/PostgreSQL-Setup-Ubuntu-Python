@@ -1,14 +1,14 @@
-from psql_actions import terminalClass
+from psql_actions import TerminalClass
 
 
-class serviceClass:
+class ServiceClass:
     def enable_postgresql_service(self):
         """ Enable PostgreSQL service"""
         # 'systemctl' used to manage the system's services.
         
         command = "systemctl enable postgresql"
 
-        terminalClass().sudo(command)
+        TerminalClass().sudo(command)
 
     def start_postgresql_service(self):
         """ Start PostgreSQL service"""
@@ -16,7 +16,7 @@ class serviceClass:
         
         command = "systemctl start postgresql"
 
-        terminalClass().sudo(command)
+        TerminalClass().sudo(command)
 
     def stop_postgresql_service(self):
         """ Stop PostgreSQL service"""
@@ -24,7 +24,7 @@ class serviceClass:
         
         command = "systemctl stop postgresql"
 
-        terminalClass().sudo(command)
+        TerminalClass().sudo(command)
 
     def restart_postgresql_service(self):
         """ Restart PostgreSQL service"""
@@ -32,4 +32,4 @@ class serviceClass:
         
         command = "systemctl restart postgresql"
 
-        terminalClass().sudo(command)
+        TerminalClass().sudo(command)

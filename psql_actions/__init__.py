@@ -2,8 +2,8 @@ from colors import Color
 import subprocess
 
 
-class terminalClass:
-    def echo_sudo_S(self, sudo_password, command):
+class TerminalClass:
+    def echo_sudo_s(self, sudo_password, command):
         """ Create a string that combines the password and the command
         'echo' print password to standard  output
         '|' pipe symbol redirects 'echo' standard output to the standard input of the subsequent command
@@ -49,69 +49,69 @@ class terminalClass:
             if process.returncode == 0:
                 if "wget -qO" in command:
                     print(
-                        Color.CAYN 
-                        + f"\n/---/ PostgreSQL GPG key downloaded. /---/\n" + f"{stdout}" 
+                        Color.CAYN
+                        + f"\n/---/ PostgreSQL GPG key downloaded. /---/\n" + f"{stdout}"
                         + Color.DEFAULT)
                 elif command == "echo deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -sc)-pgdg main":
                     print(
-                        Color.CAYN 
-                        + f"\n/---/ PostgreSQL repository added. /---/\n" 
-                        + f"{stdout}" 
+                        Color.CAYN
+                        + f"\n/---/ PostgreSQL repository added. /---/\n"
+                        + f"{stdout}"
                         + Color.DEFAULT)
                 elif "install -y postgresql postgresql-contrib" in command:
                     print(
-                        Color.CAYN 
-                        + f"\n/---/ PostgreSQL installation complete. /---/\n" 
-                        + f"{stdout}" 
+                        Color.CAYN
+                        + f"\n/---/ PostgreSQL installation complete. /---/\n"
+                        + f"{stdout}"
                         + Color.DEFAULT)
                 elif command == "systemctl status postgresql":
-                    print(Color.YELLOW 
-                          + f"\nStatus:\n{stdout}" 
+                    print(Color.YELLOW
+                          + f"\nStatus:\n{stdout}"
                           + Color.DEFAULT)
                 elif command == "psql --version":
-                    print(Color.YELLOW 
-                          + f"\nVersion:\n{stdout}" 
+                    print(Color.YELLOW
+                          + f"\nVersion:\n{stdout}"
                           + Color.DEFAULT)
                 elif command == "systemctl enable postgresql":
                     print(
-                        Color.CAYN 
-                        + f"\n/---/ PostgreSQL service enabled successfully. /---/\n" 
-                        + f"{stdout}" 
+                        Color.CAYN
+                        + f"\n/---/ PostgreSQL service enabled successfully. /---/\n"
+                        + f"{stdout}"
                         + Color.DEFAULT)
                 elif command == "systemctl start postgresql":
                     print(
-                        Color.CAYN 
-                        + f"\n/---/ PostgreSQL service started successfully. /---/\n" 
-                        + f"{stdout}" 
+                        Color.CAYN
+                        + f"\n/---/ PostgreSQL service started successfully. /---/\n"
+                        + f"{stdout}"
                         + Color.DEFAULT)
                 elif command == "systemctl stop postgresql":
                     print(
-                        Color.CAYN 
-                        + f"\n/---/ PostgreSQL service stopped successfully. /---/\n" 
-                        + f"{stdout}" 
+                        Color.CAYN
+                        + f"\n/---/ PostgreSQL service stopped successfully. /---/\n"
+                        + f"{stdout}"
                         + Color.DEFAULT)
                 elif command == "systemctl restart postgresql":
                     print(
-                        Color.CAYN 
-                        + f"\n/---/ PostgreSQL service restarted successfully. /---/\n" 
+                        Color.CAYN
+                        + f"\n/---/ PostgreSQL service restarted successfully. /---/\n"
                         + f"{stdout}" + Color.DEFAULT)
 
             else:
                 # print error if 'sudo -S' commands are used
                 if len(args) == 3:
                     print(
-                        Color.RED 
-                        + f"\nPassword '{args[2]}' is incorrect or an error occurred.\n" 
-                        + f"{stderr}" 
+                        Color.RED
+                        + f"\nPassword '{args[2]}' is incorrect or an error occurred.\n"
+                        + f"{stderr}"
                         + Color.DEFAULT)
                 # print error if 'sudo' commands are used
                 else:
-                    print(Color.RED 
-                            + f"\nError occurred.\n" 
-                            + f"{stderr}" 
-                            + Color.DEFAULT)
+                    print(Color.RED
+                          + f"\nError occurred.\n"
+                          + f"{stderr}"
+                          + Color.DEFAULT)
 
         except subprocess.CalledProcessError as error:
             print(Color.RED +
-                  f"\nError occurred.\nError:\n{error}" 
+                  f"\nError occurred.\nError:\n{error}"
                   + Color.DEFAULT)

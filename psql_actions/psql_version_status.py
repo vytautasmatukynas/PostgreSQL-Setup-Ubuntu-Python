@@ -1,14 +1,14 @@
-from psql_actions import terminalClass
+from psql_actions import TerminalClass
 
 
-class versionClass:
+class VersionClass:
     def get_postgresql_status(self):
         """ Check PostgreSQL status """
         # 'systemctl' used to manage the system's services.
         
         command = "systemctl status postgresql"
 
-        terminalClass().sudo(command)
+        TerminalClass().sudo(command)
 
     def get_postgresql_version(self):
         """ Check PostgreSQL version """
@@ -16,4 +16,4 @@ class versionClass:
         
         command = "psql --version"
 
-        terminalClass().sudo(command)
+        TerminalClass().sudo(command)
