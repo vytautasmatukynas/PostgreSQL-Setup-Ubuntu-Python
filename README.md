@@ -1,9 +1,6 @@
 # Ubuntu PostgreSQL Setup App
 
-### WORK IN PROGRESS...
-
-Simple script that can install, check version/status and enable/disable PostgreSQL on Ubuntu. Still needs config `UFW`
-and config `Remote Access` menu.
+Simple script that can install, check version/status and enable/disable PostgreSQL on Ubuntu.
 
 ![image](https://github.com/vytautasmatukynas/PostgreSQL-Setup-Ubuntu-Python/assets/51360361/96e7fcc7-fdcf-4f8b-98c4-e7980e38a66e)
 
@@ -20,7 +17,6 @@ Install PostgreSQL:  `apt update -y` `apt install -y postgresql postgresql-contr
 Check PostgreSQL status: `systemctl status postgresql`
 
 Check PostgreSQL version: `psql --version`
-
 
 ### PostgreSQL service actions:
 
