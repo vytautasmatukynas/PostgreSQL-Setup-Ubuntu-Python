@@ -18,7 +18,6 @@ Check PostgreSQL status: `systemctl status postgresql`
 
 Check PostgreSQL version: `psql --version`
 
-
 ### PostgreSQL service actions:
 
 ![image](https://github.com/vytautasmatukynas/PostgreSQL-Setup-Ubuntu-Python/assets/51360361/e6cee18f-a33d-4e78-8287-9b01e23db8d1)
