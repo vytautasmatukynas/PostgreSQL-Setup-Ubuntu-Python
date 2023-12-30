@@ -1,2 +1,3 @@
 psql_ubuntu_venv
 .idea
+__pycache__
