@@ -1,5 +1,7 @@
 # Ubuntu PostgreSQL Setup App
 
+After burning a few memory cards with my Raspberry Pi 4, I wrote this script to speed up the PostgreSQL setup.
+
 Simple script that can install, check version/status and enable/disable PostgreSQL on Ubuntu.
 
 ![image](https://github.com/vytautasmatukynas/PostgreSQL-Setup-Ubuntu-Python/assets/51360361/96e7fcc7-fdcf-4f8b-98c4-e7980e38a66e)
